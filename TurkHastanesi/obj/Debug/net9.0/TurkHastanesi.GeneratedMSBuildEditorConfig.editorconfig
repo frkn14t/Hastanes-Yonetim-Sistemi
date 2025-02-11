@@ -1,0 +1,217 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TurkHastanesi
+build_property.RootNamespace = TurkHastanesi
+build_property.ProjectDir = C:\Users\FURKAN\Desktop\HastaneBolu\TurkHastanesi\TurkHastanesi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\FURKAN\Desktop\HastaneBolu\TurkHastanesi\TurkHastanesi
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/AcilDurums/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNpbER1cnVtc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/AcilDurums/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNpbER1cnVtc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/AcilDurums/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNpbER1cnVtc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/AcilDurums/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNpbER1cnVtc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/AcilDurums/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNpbER1cnVtc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Appointments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Appointments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Appointments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Appointments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Appointments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Asistans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RhbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Asistans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RhbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Asistans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RhbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Asistans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RhbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Asistans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RhbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Departments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Departments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Departments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Departments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Doktors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Doktors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Doktors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Doktors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Doktors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Kullanicis/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Kullanicis/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Kullanicis/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Kullanicis/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Kullanicis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Nobets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iZXRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Nobets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iZXRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Nobets/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iZXRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Nobets/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iZXRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Nobets/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9iZXRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Rols/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Rols/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Rols/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Rols/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Rols/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FURKAN/Desktop/HastaneBolu/TurkHastanesi/TurkHastanesi/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-psra87tx7g

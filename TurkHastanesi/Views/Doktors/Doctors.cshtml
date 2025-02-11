@@ -1,0 +1,209 @@
+﻿@model IEnumerable<HastaneBolu.Models.Classes.Doktor>
+
+@{
+    ViewData["Title"] = "Doktor Listesi";
+}
+
+<style>
+    .doctors-container {
+        padding: 2rem;
+        background-color: #f8f9fa;
+        min-height: calc(100vh - 120px);
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .page-title {
+        color: #20c997;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .doctors-table {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+        .table thead th {
+            background-color: #20c997;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+            border: none;
+        }
+
+        .table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+            .table tbody tr:hover {
+                background-color: #f8f9fa;
+                transform: scale(1.01);
+            }
+
+        .table td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-color: #e9ecef;
+        }
+
+    .doctor-contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .doctor-contact i {
+            color: #20c997;
+        }
+
+    .doctor-name {
+        font-weight: 500;
+        color: #343a40;
+    }
+
+    .doctor-email {
+        color: #20c997;
+        text-decoration: none;
+    }
+
+        .doctor-email:hover {
+            text-decoration: underline;
+        }
+
+    .doctor-phone {
+        color: #6c757d;
+        text-decoration: none;
+    }
+
+        .doctor-phone:hover {
+            color: #20c997;
+        }
+
+    .doctor-address {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .user-id {
+        background-color: #e9ecef;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        color: #495057;
+    }
+
+    @@media (max-width: 768px) {
+        .doctors-container {
+            padding: 1rem;
+        }
+
+        .table thead {
+            display: none;
+        }
+
+        .table, .table tbody, .table tr, .table td {
+            display: block;
+            width: 100%;
+        }
+
+            .table tr {
+                margin-bottom: 1rem;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .table td {
+                text-align: right;
+                padding: 0.75rem;
+                position: relative;
+                padding-left: 50%;
+            }
+
+                .table td::before {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 0;
+                    width: 50%;
+                    padding-left: 0.75rem;
+                    font-weight: 500;
+                    text-align: left;
+                    color: #20c997;
+                }
+    }
+</style>
+
+<div class="doctors-container">
+    <div class="page-header">
+        <h1 class="page-title">
+            <i class="fas fa-user-md me-2"></i>
+            Doktor Listesi
+        </h1>
+    </div>
+
+    <div class="doctors-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>İletişim</th>
+                    <th>Adres</th>
+                    <th>Kullanıcı ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td data-label="Ad Soyad">
+                            <span class="doctor-name">@item.Ad @item.Soyad</span>
+                        </td>
+                        <td data-label="İletişim">
+                            <div class="doctor-contact">
+                                <a href="tel:@item.Telefon" class="doctor-phone">
+                                    <i class="fas fa-phone-alt"></i>
+                                    @item.Telefon
+                                </a>
+                                <a href="mailto:@item.Email" class="doctor-email">
+                                    <i class="fas fa-envelope"></i>
+                                    @item.Email
+                                </a>
+                            </div>
+                        </td>
+                        <td data-label="Adres">
+                            <span class="doctor-address">
+                                <i class="fas fa-map-marker-alt me-1"></i>
+                                @item.Address
+                            </span>
+                        </td>
+                        <td data-label="Kullanıcı ID">
+                            <span class="user-id">@item.kullanici?.KullaniciId</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

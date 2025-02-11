@@ -1,0 +1,181 @@
+﻿@model IEnumerable<HastaneBolu.Models.Classes.Asistan>
+
+@{
+    ViewData["Title"] = "Asistan Listesi";
+}
+
+<style>
+    :root {
+        --assistant-primary: #007bff;
+        --assistant-secondary: #f8f9fa;
+        --assistant-text: #333;
+    }
+
+    .assistant-container {
+        padding: 2rem;
+        background-color: var(--assistant-secondary);
+        min-height: calc(100vh - 120px);
+    }
+
+    .assistant-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .assistant-title {
+        color: var(--assistant-primary);
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .assistant-list {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    .assistant-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .assistant-table thead {
+            background-color: var(--assistant-primary);
+            color: white;
+        }
+
+        .assistant-table th,
+        .assistant-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.3s ease;
+        }
+
+        .assistant-table th {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .assistant-table tbody tr {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .assistant-table tbody tr:hover {
+                background-color: rgba(0, 123, 255, 0.05);
+                transform: translateY(-3px);
+            }
+
+        .assistant-table .assistant-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: #28a745;
+            color: white;
+        }
+
+    .assistant-contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .assistant-contact i {
+            color: var(--assistant-primary);
+        }
+
+    @@media (max-width: 768px) {
+        .assistant-container {
+            padding: 1rem;
+        }
+
+        .assistant-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .assistant-table th,
+        .assistant-table td {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .assistant-table {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<div class="assistant-container">
+    <div class="assistant-header">
+        <h1 class="assistant-title">@ViewData["Title"]</h1>
+    </div>
+
+    <div class="assistant-list">
+        <table class="assistant-table">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>İletişim</th>
+                    <th>Bölüm</th>
+                    <th>Adres</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Ad</td>
+                        <td>@item.Soyad</td>
+                        <td>
+                            <div class="assistant-contact">
+                                <i class="fas fa-phone"></i>
+                                @item.Telefon
+                            </div>
+                            <div class="assistant-contact">
+                                <i class="fas fa-envelope"></i>
+                                @item.Email
+                            </div>
+                        </td>
+                        <td>
+                            <span class="assistant-badge">
+                                @(item.Department?.Ad ?? "Atanmamış")
+                            </span>
+                        </td>
+                        <td>@item.Address</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll('.assistant-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('mouseover', function() {
+                this.style.boxShadow = '0 4px 8px rgba(0,123,255,0.2)';
+            });
+            row.addEventListener('mouseout', function() {
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+</script>

@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\models\\data\\hastaneboludbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\models\\data\\hastaneboludbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\models\\classes\\asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\models\\classes\\asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\models\\classes\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\models\\classes\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|d:\\s\u00FCsl\u00FC 3\\turkhastanesi\\turkhastanesi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C764FC5-4B97-443A-88E3-FBBAA4C1D5E6}|TurkHastanesi\\HastaneBolu.csproj|solutionrelative:turkhastanesi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TurkHastanesi\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T22:04:11.964Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "TurkHastanesi\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T11:39:34.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Kullanici.cs",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Classes\\Kullanici.cs",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Models\\Classes\\Kullanici.cs",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Classes\\Kullanici.cs",
+              "RelativeToolTip": "TurkHastanesi\\Models\\Classes\\Kullanici.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T11:39:32.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Asistan.cs",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Classes\\Asistan.cs",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Models\\Classes\\Asistan.cs",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Classes\\Asistan.cs",
+              "RelativeToolTip": "TurkHastanesi\\Models\\Classes\\Asistan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:57:37.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HastaneBoluDBContext.cs",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Data\\HastaneBoluDBContext.cs",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Models\\Data\\HastaneBoluDBContext.cs",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Models\\Data\\HastaneBoluDBContext.cs",
+              "RelativeToolTip": "TurkHastanesi\\Models\\Data\\HastaneBoluDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:48:39.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "TurkHastanesi\\Controllers\\AppointmentsController.cs",
+              "ToolTip": "D:\\s\u00FCsl\u00FC 3\\TurkHastanesi\\TurkHastanesi\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "TurkHastanesi\\Controllers\\AppointmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T19:48:04.76Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hastane Bolu</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TurkHastanesi.styles.css" asp-append-version="true" />
+    <style>
+    .btn-custom-orange {
+        background-color: #ff8c00;
+        color: white;
+        border: none;
+        transition: all 0.3s ease;
+    }
+    .btn-custom-orange:hover {
+        background-color: #ff6a00;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        color: white;
+    }
+    .login-btn {
+        background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        color: white;
+        transition: all 0.3s ease;
+    }
+    .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255,75,43,0.2);
+        color: white;
+    }
+    .navbar {
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hastane Bolu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="AcilDurums" asp-action="AcilDurum">AcilDurum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Appointments" asp-action="Randevu">Randevu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Asistans" asp-action="Asistants">Asistan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Departments" asp-action="Bolumler">Bolümler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Doktors" asp-action="Doctors">Doktor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-custom-orange m-2" asp-area="" asp-controller="Nobets" asp-action="Calender">Takvim</a>
+                        </li>
+                        <div class="ms-auto">
+                            <a class="btn login-btn" href="@Url.Action("Login", "Admin")">Giriş Yap</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Hastane Bolu - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

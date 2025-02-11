@@ -1,0 +1,57 @@
+﻿@model IEnumerable<HastaneBolu.Models.Classes.Appointment>
+
+@{
+    ViewData["Title"] = "Randevu Listesi";
+   
+}
+
+<div class="container my-5">
+    <h1 class="text-center text-primary mb-4">Randevu Listesi</h1>
+    <table class="table table-hover table-bordered shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Randevu Tarihi</th>
+                <th>Not</th>
+                <th>Asistan</th>
+                <th>Doktor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.RandevuTarihi.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@item.Not</td>
+                    <td>@item.Asistan?.Ad @item.Asistan?.Soyad</td>
+                    <td>@item.doktor?.Ad @item.doktor?.Soyad</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .table {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .table th {
+            font-weight: bold;
+            color: #fff;
+        }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>

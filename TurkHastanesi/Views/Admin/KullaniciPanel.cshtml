@@ -1,0 +1,339 @@
+@{
+    ViewData["Title"] = "Yönetim Paneli";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Türker Hastanesi</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        :root {
+            --sidebar-width: 250px;
+            --primary-color: var(--main-color);
+            --hover-color: #f8f9fa;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f7fa;
+        }
+
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background: white;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+        }
+
+        .sidebar-header {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: #333;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--hover-color);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .stat-title {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logout-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            width: calc(var(--sidebar-width) - 3rem);
+        }
+
+        .admin-container {
+            padding: 2rem;
+            background: #f8f9fa;
+            min-height: calc(100vh - 60px);
+        }
+
+        .admin-header {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .admin-title {
+            color: var(--main-color);
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .admin-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .admin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: var(--main-color);
+            text-decoration: none;
+        }
+
+        .admin-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+        }
+
+        .admin-card h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .logout-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .logout-btn i {
+            margin-right: 0.5rem;
+        }
+
+        @@media (max-width: 768px) {
+            .admin-container {
+                padding: 1rem;
+            }
+
+            .admin-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h4 class="mb-0">Türker Hastanesi</h4>
+                <small class="text-muted">Yönetim Paneli</small>
+            </div>
+
+            <div class="nav flex-column">
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Asistans" asp-action="Index">
+                        <i class="fas fa-user-nurse"></i>
+                        Asistanlar
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Doktors" asp-action="Index">
+                        <i class="fas fa-user-md"></i>
+                        Doktorlar
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Appointments" asp-action="Index">
+                        <i class="far fa-calendar-check"></i>
+                        Randevular
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Departments" asp-action="Index">
+                        <i class="fas fa-hospital"></i>
+                        Departmanlar
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Nobets" asp-action="Index">
+                        <i class="fas fa-clock"></i>
+                        Nöbetler
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="AcilDurums" asp-action="Index">
+                        <i class="fas fa-ambulance"></i>
+                        Acil Durumlar
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-controller="Rols" asp-action="Index">
+                        <i class="fas fa-users-cog"></i>
+                        Roller
+                    </a>
+                </div>
+            </div>
+
+            <a href="@Url.Action("Logout", "Admin")" class="btn btn-outline-danger logout-btn">
+                <i class="fas fa-sign-out-alt me-2"></i>
+                Çıkış Yap
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <div class="admin-header">
+                <h1 class="admin-title">@ViewData["Title"]</h1>
+            </div>
+
+            <div class="admin-grid">
+                <a class="admin-card" asp-controller="Asistans" asp-action="Index">
+                    <i class="fas fa-user-nurse"></i>
+                    <h3>Asistanlar</h3>
+                </a>
+                <a class="admin-card" asp-controller="Doktors" asp-action="Index">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Doktorlar</h3>
+                </a>
+                <a class="admin-card" asp-controller="Appointments" asp-action="Index">
+                    <i class="far fa-calendar-check"></i>
+                    <h3>Randevular</h3>
+                </a>
+                <a class="admin-card" asp-controller="Departments" asp-action="Index">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Departmanlar</h3>
+                </a>
+                <a class="admin-card" asp-controller="Nobets" asp-action="Index">
+                    <i class="fas fa-clock"></i>
+                    <h3>Nöbetler</h3>
+                </a>
+                <a class="admin-card" asp-controller="AcilDurums" asp-action="Index">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>Acil Durumlar</h3>
+                </a>
+                <a class="admin-card" asp-controller="Rols" asp-action="Index">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Roller</h3>
+                </a>
+            </div>
+
+            <a href="@Url.Action("Logout", "Admin")" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Çıkış Yap
+            </a>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Aktif menü öğesini vurgula
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

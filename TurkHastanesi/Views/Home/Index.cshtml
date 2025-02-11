@@ -1,0 +1,541 @@
+@{
+    ViewData["Title"] = "Bolu Hastanesi - Ana Sayfa";
+}
+
+<style>
+    :root {
+        --primary-color: #1a73e8;
+        --secondary-color: #34a853;
+        --accent-color: #fbbc05;
+        --dark-color: #202124;
+        --light-color: #f8f9fa;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+        min-height: 100%;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #eef2f7;
+        color: var(--dark-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    .hospital-header {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .header-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://media.istockphoto.com/id/1312706413/tr/foto%C4%9Fraf/modern-hastane-binas%C4%B1.jpg?s=612x612&w=0&k=20&c=T0TEE7l95lQHgxcDWW5MKc9r__QIKO5-xCb3eZq0dMU=');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.85;
+        filter: brightness(0.9);
+        z-index: 1;
+    }
+
+    .header-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 2rem;
+        color: white;
+    }
+
+    .header-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .services-grid {
+        padding: 2rem 0;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-card .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .service-card p {
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-section {
+        background: white;
+        padding: 4rem 2rem;
+        border-radius: 10px;
+        margin: 3rem 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-section {
+        background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: transparent;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .gallery-item:hover .overlay {
+        height: 100%;
+    }
+
+    .overlay-text {
+        color: white;
+        font-size: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay-text {
+        opacity: 1;
+    }
+
+    .cta-section {
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: #ffffff;
+        color: #2c3e50;
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
+
+    .btn-primary:hover {
+        background: #f8f9fa;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateY(-2px);
+    }
+
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .contact-info {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-info h3 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .info-item {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .info-item i {
+        color: #1a73e8;
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .info-content h4 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-content p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background: #1a73e8;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background: #1557b0;
+        transform: translateY(-2px);
+    }
+
+    .map-container {
+        margin-top: 3rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+    }
+
+    .media (max-width: 768px) {
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+        .cta-buttons {
+            flex-direction: column;
+        }
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<header class="hospital-header">
+    <div class="header-bg"></div>
+    <div class="header-content">
+        <h1>Özel Bolu Hastanesi</h1>
+        <p>Sağlıkta güvenilir, tedavide mükemmel hizmet. Modern tıbbın gücüyle, sizin ve sevdiklerinizin sağlığı için buradayız.</p>
+    </div>
+</header>
+
+<section class="services-grid">
+    <div class="gallery-grid">
+        <div class="service-card">
+            <div class="icon">🚑</div>
+            <h3>Acil Durum</h3>
+            <p>7/24 Profesyonel Acil Sağlık Hizmetleri</p>
+            <a href="@Url.Action("AcilDurum", "AcilDurums")" class="btn btn-custom-orange">Detaylar</a>
+        </div>
+        <div class="service-card">
+            <div class="icon">👩‍⚕️</div>
+            <h3>Doktorlarımız</h3>
+            <p>Alanında Uzman, Deneyimli Sağlık Ekibimiz</p>
+            <a href="@Url.Action("Doctors", "Doktors")" class="btn btn-custom-orange">Tanış</a>
+        </div>
+        <div class="service-card">
+            <div class="icon">🏥</div>
+            <h3>Bölümler</h3>
+            <p>Kapsamlı Tıbbi Hizmet Departmanlarımız</p>
+            <a href="@Url.Action("Bolumler", "Departments")" class="btn btn-custom-orange">Keşfet</a>
+        </div>
+        <div class="service-card">
+            <div class="icon">📅</div>
+            <h3>Randevu</h3>
+            <p>Kolay ve Hızlı Çevrimiçi Randevu Sistemi</p>
+            <a href="@Url.Action("Calender", "Nobets")" class="btn btn-custom-orange">Randevu Al</a>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Hastane Tesislerimiz</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/1056535134/tr/foto%C4%9Fraf/modern-ameliyathane-t%C4%B1bbi-hastane-i%C3%A7-anesteziyoloji-makine-ekipman-ile-arka-plan.jpg?s=1024x1024&w=is&k=20&c=N09r235rEspSONPQ6ePtoDZEj3QDSfugdW0o5FRNgNA=" alt="Hastane Tesisleri 1">
+                <div class="overlay">
+                    <div class="overlay-text">Modern Ameliyathane</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/91156501/tr/foto%C4%9Fraf/patient-in-intensive-care.jpg?s=612x612&w=0&k=20&c=3vAfEUU9cRQkTkHBo1L39iqplZ30uO4mRvRUIcDVmrQ=" alt="Hastane Tesisleri 2">
+                <div class="overlay">
+                    <div class="overlay-text">Yoğun Bakım Ünitesi</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/1346675584/tr/foto%C4%9Fraf/modern-medicine-laboratory-diverse-team-of-multi-ethnic-young-scientists-analysing-test.jpg?s=612x612&w=0&k=20&c=UDwNErSzyzYH-eBZETKlQuo_WTmImzBCTA3jhUWCw0I=" alt="Hastane Tesisleri 3">
+                <div class="overlay">
+                    <div class="overlay-text">Tanı Merkezi</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/1295780754/tr/foto%C4%9Fraf/%C3%B6zel-hastane-odas%C4%B1.jpg?s=1024x1024&w=is&k=20&c=2WNRWPtLVHVfhFvg3aYliJPGQRS2aNxDtFPVi0KJE_Y=" alt="Hastane Tesisleri 4">
+                <div class="overlay">
+                    <div class="overlay-text">Hasta Odaları</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Sağlığınız Bizim İçin Önemli</h2>
+    <p>Kaliteli sağlık hizmeti ve güler yüzle hizmetinizdeyiz.</p>
+    <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Hemen İletişime Geç</a>
+        <a href="#" class="btn btn-secondary">Acil Durum Hattı</a>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2 class="text-center mb-4">İletişim</h2>
+        <p class="text-center mb-5">Sizlere daha iyi hizmet verebilmek için her zaman yanınızdayız.</p>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>İletişim Bilgileri</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-content">
+                        <h4>Adres</h4>
+                        <p>Tabaklar Mahallesi, Cumhuriyet Cd. No:14, 14100 Merkez/Bolu</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="info-content">
+                        <h4>Telefon</h4>
+                        <p>+90 374 XXX XX XX</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info-content">
+                        <h4>E-posta</h4>
+                        <p>info@bolusporcuhastanesi.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="info-content">
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Pazartesi - Cumartesi: 08:00 - 18:00<br>
+                           Pazar: Kapalı</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Bize Ulaşın</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon Numaranız</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea class="form-control" id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gönder</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.911428336574!2d31.60106937677984!3d40.73399657138707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d3fd04b531f21%3A0xb9cc5ef9c15f9479!2sTabaklar%2C%20Cumhuriyet%20Cd.%20No%3A14%2C%2014100%20Merkez%2FBolu!5e0!3m2!1str!2str!4v1703191436811!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+    @section Scripts {
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const header = document.querySelector('.hospital-header');
+                const headerContent = document.querySelector('.header-content');
+
+                window.addEventListener('scroll', function() {
+                    let scrollPos = window.scrollY;
+                    headerContent.style.transform = `translateY(${scrollPos * 0.5}px)`;
+                    headerContent.style.opacity = 1 - (scrollPos / header.offsetHeight);
+                });
+            });
+        </script>
+    }

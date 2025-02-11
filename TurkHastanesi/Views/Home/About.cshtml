@@ -1,0 +1,144 @@
+@{
+    ViewData["Title"] = "Hakkımızda - Bolu Hastanesi";
+}
+
+<style>
+    .about-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    }
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .about-header h1 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .about-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .about-card h2 {
+        color: #ff8c00;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .about-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .mission-vision {
+        background: #fff;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+    }
+
+    .mission-vision h2 {
+        color: #ff8c00;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .stats-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        color: #ff8c00;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: #666;
+    }
+</style>
+
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-header">
+            <h1>Bolu Hastanesi Hakkında</h1>
+            <p>Sağlığınız İçin Yanınızdayız</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-card">
+                <h2>Tarihçemiz</h2>
+                <p>2024 yılında kurulan hastanemiz, modern tıp teknolojileri ve uzman kadrosuyla Bolu'nun sağlık alanındaki öncü kuruluşlarından biri haline gelmiştir. Sürekli gelişen ve yenilenen yapımızla, hastalarımıza en iyi hizmeti sunmayı hedefliyoruz.</p>
+            </div>
+
+            <div class="about-card">
+                <h2>Değerlerimiz</h2>
+                <p>Hasta odaklı yaklaşım, etik değerlere bağlılık, sürekli gelişim ve yenilikçilik ilkelerimiz doğrultusunda hizmet veriyoruz. Hastalarımızın güvenini ve memnuniyetini en üst düzeyde tutmayı amaçlıyoruz.</p>
+            </div>
+
+            <div class="about-card">
+                <h2>Kalite Politikamız</h2>
+                <p>Uluslararası standartlarda sağlık hizmeti sunmayı, sürekli iyileştirme ve gelişmeyi hedefleyen bir kalite politikası izliyoruz. Modern tıbbi teknolojiler ve uzman kadromuzla en iyi hizmeti sunmaya çalışıyoruz.</p>
+            </div>
+        </div>
+
+        <div class="mission-vision">
+            <h2>Misyon ve Vizyonumuz</h2>
+            <p>Bolu ve çevre illerdeki vatandaşlarımıza kaliteli, güvenilir ve ulaşılabilir sağlık hizmeti sunmak misyonumuz, Türkiye'nin önde gelen sağlık kuruluşlarından biri olmak vizyonumuzdur.</p>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Uzman Doktor</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Sağlık Personeli</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Branş</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Hizmet</div>
+            </div>
+        </div>
+    </div>
+</section>

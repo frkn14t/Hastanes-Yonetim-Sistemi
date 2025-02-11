@@ -1,0 +1,160 @@
+﻿@model IEnumerable<HastaneBolu.Models.Classes.AcilDurum>
+
+@{
+    ViewData["Title"] = "Acil Durumlar";
+}
+
+<style>
+    :root {
+        --emergency-primary: #d9534f;
+        --emergency-secondary: #f8f9fa;
+        --emergency-text: #333;
+    }
+
+    .emergency-container {
+        padding: 2rem;
+        background-color: var(--emergency-secondary);
+        min-height: calc(100vh - 120px);
+    }
+
+    .emergency-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .emergency-title {
+        color: var(--emergency-primary);
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .emergency-list {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    .emergency-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .emergency-table thead {
+            background-color: var(--emergency-primary);
+            color: white;
+        }
+
+        .emergency-table th,
+        .emergency-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.3s ease;
+        }
+
+        .emergency-table th {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .emergency-table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+            .emergency-table tbody tr:hover {
+                background-color: rgba(217, 83, 79, 0.05);
+            }
+
+        .emergency-table .emergency-status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+    .emergency-status-active {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .emergency-status-resolved {
+        background-color: #28a745;
+        color: white;
+    }
+
+    @@media (max-width: 768px) {
+        .emergency-container {
+            padding: 1rem;
+        }
+
+        .emergency-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .emergency-table th,
+        .emergency-table td {
+            padding: 0.75rem;
+        }
+    }
+</style>
+
+<div class="emergency-container">
+    <div class="emergency-header">
+        <h1 class="emergency-title">@ViewData["Title"]</h1>
+    </div>
+
+    <div class="emergency-list">
+        <table class="emergency-table">
+            <thead>
+                <tr>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>Oluşturulma Tarihi</th>
+                    <th>Durum</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Baslik</td>
+                        <td>@item.Aciklama</td>
+                        <td>@item.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                        <td>
+                            <span class="emergency-status emergency-status-active">Aktif</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll('.emergency-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.01)';
+            });
+            row.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
